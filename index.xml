@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Josef Reither Museum</title>
+    <link>http://josef-reither-museum.github.io/</link>
+    <description>Recent content on Josef Reither Museum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-AT</language><atom:link href="http://josef-reither-museum.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kontakt</title>
+      <link>http://josef-reither-museum.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://josef-reither-museum.github.io/contact/</guid>
+      <description>Gemeinde Langenrohr
+Josef Reither Straße 16
+3442 Langenrohr
+Telefon: +43 664 3266850
+gemeinde@langenrohr.gv.at</description>
+    </item>
+    
+  </channel>
+</rss>
