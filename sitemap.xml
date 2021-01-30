@@ -3,15 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://josef-reither-museum.github.io/preise/</loc>
+  </url>
+  
+  <url>
+    <loc>http://josef-reither-museum.github.io/kontakt/</loc>
+  </url>
+  
+  <url>
     <loc>http://josef-reither-museum.github.io/categories/</loc>
   </url>
   
   <url>
     <loc>http://josef-reither-museum.github.io/</loc>
-  </url>
-  
-  <url>
-    <loc>http://josef-reither-museum.github.io/kontakt/</loc>
   </url>
   
   <url>
