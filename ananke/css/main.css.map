@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/dominikinfuhr/code/museum",
+	"sourceRoot": "/home/dominik/code/museum",
 	"sources": [
 		"ananke/css/main.css"
 	],
