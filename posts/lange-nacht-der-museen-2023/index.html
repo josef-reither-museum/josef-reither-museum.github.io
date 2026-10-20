@@ -19,14 +19,78 @@ Hier geht&rsquo;s zur Einladung">
     
     
 
+    <link rel="stylesheet" href="/ananke/css/main.02a37ad6c4e155c542d276915a0e3f83f5c7c5fec443350f6e60753f1679b7a7.css" integrity="sha256-AqN61sThVcVC0naRWg4/g/XHxf7EQzUPbmB1PxZ5t6c=" crossorigin="anonymous">
+    <script>
+  (function () {
+    "use strict";
+
     
-<link rel="stylesheet" href="/ananke/css/main.min.efe4d852f731d5d1fbb87718387202a97aafd768cdcdaed0662bbe6982e91824.css" >
-
-
-
-
     
+    function revealButtons() {
+      var buttons = document.querySelectorAll(".code-block .code-copy[hidden]");
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].hidden = false;
+      }
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", revealButtons);
+    } else {
+      revealButtons();
+    }
 
+    function flash(button) {
+      var label = button.querySelector(".code-copy-label");
+      var previous = label ? label.textContent : null;
+      button.classList.add("is-copied");
+      if (label) label.textContent = "Copied";
+      window.setTimeout(function () {
+        button.classList.remove("is-copied");
+        if (label && previous !== null) label.textContent = previous;
+      }, 2000);
+    }
+
+    function legacyCopy(text) {
+      var area = document.createElement("textarea");
+      area.value = text;
+      area.setAttribute("readonly", "");
+      area.style.position = "absolute";
+      area.style.left = "-9999px";
+      document.body.appendChild(area);
+      area.select();
+      var ok = false;
+      try {
+        ok = document.execCommand("copy");
+      } catch (e) {
+        ok = false;
+      }
+      document.body.removeChild(area);
+      return ok;
+    }
+
+    function copyFrom(button) {
+      var container = button.closest(".code-block");
+      if (!container) return;
+      var pre = container.querySelector("pre");
+      if (!pre) return;
+      var source = pre.querySelector("code") || pre;
+      var text = source.innerText;
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(
+          function () { flash(button); },
+          function () { if (legacyCopy(text)) flash(button); }
+        );
+      } else if (legacyCopy(text)) {
+        flash(button);
+      }
+    }
+
+    document.addEventListener("click", function (event) {
+      var button = event.target.closest(".code-copy");
+      if (button) copyFrom(button);
+    });
+  })();
+</script>
 
     
       
@@ -39,6 +103,8 @@ Hier geht&rsquo;s zur Einladung">
       <link rel="canonical" href="https://josef-reither-museum.at/posts/lange-nacht-der-museen-2023/">
     
 
+    
+    
     <meta property="og:url" content="https://josef-reither-museum.at/posts/lange-nacht-der-museen-2023/">
 	<meta property="og:site_name" content="Josef Reither Museum">
 	<meta property="og:title" content="Lange Nacht Der Museen">
@@ -62,13 +128,13 @@ Hier geht’s zur Einladung">
 Hier geht’s zur Einladung">
 
       
+      
     
 	
-  </head><body class="ma0 avenir bg-near-white production">
-
-    
+  </head><body class="ma0 avenir bg-near-white production is-page is-page page-lange-nacht-der-museen-2023">
    
   
+
 
   <header>
     <div class="bg-black">
@@ -121,17 +187,13 @@ Hier geht’s zur Einladung">
   </header>
 
 
+<main class="pb7" role="main">
+  
 
-    <main class="pb7" role="main">
-      
-  
-  
-  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked ttu">
-          
-        Posts
-      </aside>
+  <article class="page-lange-nacht-der-museen-2023 flex-l mw7 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100"><aside class="instapaper_ignoref b helvetica tracked ttu">
+    <a class="link dim" href="https://josef-reither-museum.at/posts/">Posts</a>
+  </aside>
 <h1 class="f1 athelas mt3 mb1">Lange Nacht Der Museen</h1>
       
       
@@ -142,31 +204,20 @@ Hier geht’s zur Einladung">
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Der Kulturkreis Langenrohr lädt recht herzlich zur langen Nacht der Museen am Samstag, den <strong>7. Oktober</strong> von <strong>18 Uhr bis 1 Uhr</strong> Früh.
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l"><p>Der Kulturkreis Langenrohr lädt recht herzlich zur langen Nacht der Museen am Samstag, den <strong>7. Oktober</strong> von <strong>18 Uhr bis 1 Uhr</strong> Früh.
 Eröffnet wird der Abend von Bürgermeister Leopold Figl.
 Danach finden zirka alle 30 Minuten Führungen statt.
 Zusätzlich wird auch eine Sonderausstellung stattfinden.</p>
 <p><a href="/posts/2023/lange-nacht-der-museen-2023.pdf">Hier geht&rsquo;s zur Einladung</a></p>
 <ul class="pa0">
   
+</ul><ul class="pa0">
+  
 </ul>
-<div class="mt6 instapaper_ignoref">
+
       
-      
-      </div>
-    </div>
-
-    <aside class="w-30-l mt6-l">
-
-
-
-
-</aside>
-
-  </article>
-
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+    </div></article>
+</main><footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://josef-reither-museum.at/" >
     &copy;  Josef Reither Museum 2026 
@@ -175,6 +226,35 @@ Zusätzlich wird auch eine Sonderausstellung stattfinden.</p>
 </div>
   </div>
 </footer>
-
-  </body>
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
